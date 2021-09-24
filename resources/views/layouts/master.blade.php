@@ -10,7 +10,7 @@
     <meta name="theme-color" content="#1a54de">
     <meta name="msapplication-navbutton-color" content="#1a54de">
     <meta name="apple-mobile-web-app-status-bar-style" content="#1a54de">
-    <title>Dashboard - MaterialMe</title>
+    <title>{{$title}}</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css" rel="stylesheet" />
     <link href="{{ asset('dist/css/materialize.min.css')}}" type="text/css" rel="stylesheet" />
     <link href="{{ asset('dist/plugins/chartist/dist/chartist.min.css')}}" type="text/css" rel="stylesheet" />
@@ -36,7 +36,7 @@
         </div>
     </div>
     @include('layouts.navbar')
-    <main>
+    <main class="container">
         @yield('content')
     </main>
     @include('layouts.footer')
