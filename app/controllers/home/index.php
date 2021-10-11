@@ -50,7 +50,7 @@ function addToTemp($id_session, $id_question)
     if (
         mysqli_query(
             $conn,
-            "INSERT into tempQuestion 
+            "INSERT into tempQuestion
             values(null, '$id_session', '$id_question', '0', current_timestamp)"
         )
     );

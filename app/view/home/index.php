@@ -1,33 +1,46 @@
-<div class="section me-page-body">
-    <div class="row m-b-no">
-        <div class="col s12 m12 l6" style="height:400px">
-            <div class="card">
-                <div class="card-content">
-                    <div class="row">
-                        <form action="index.php?page=home" method="POST" class="col s12 no-padding">
-                            <div class="row no-margin">
-                                <div class="input-field col s12">
-                                    <input id="name" name="name" type="text" class="" required>
-                                    <label for="name" class="">Name</label>
+<div class="main-container">
+    <section class="height-100 imagebg text-center" data-overlay="1">
+        <div class="background-image-holder">
+            <img alt="background" src="img/bg_englishchallenge.png" />
+        </div>
+        <div class="container pos-vertical-center">
+            <div class="row">
+                <div class="col-md-7 col-lg-5 ">
+                    <div class="boxed boxed--border">
+                        <h3>Welcome Buddy, </br>let's get started by fill the form bellow</h3>
+                    </div>
+                    <div class="boxed boxed--border">
+                        <form action="index.php?page=home" method="POST">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input id="name" name="name" type="text" required placeholder="Your Name" autofocus>
                                 </div>
-                                <div class="input-field col s12">
-                                    <input id="level" name="level" type="number" class="" min=1 max=3 required>
-                                    <label for="level" class="">Level</label>
+                                <div class="input-select col-md-12">
+                                    <select id="level" name="level" required>
+                                        <option selected="" value="">Select An Option</option>
+                                        <option value="1">Beginner</option>
+                                        <option value="2">Intermediate</option>
+                                        <option value="3">Advanced</option>
+                                    </select>
                                 </div>
-                                <div class="input-field col s12">
-                                    <input id="amount" name="amount" type="number" required>
-                                    <label for="amount">amount of test</label>
+                                <div class="col-md-12">
+                                    <select id="amount" name="amount" required>
+                                        <option selected="" value="">Amount Of Test</option>
+                                        <option value="10">10</option>
+                                        <option value="20">20</option>
+                                        <option value="30">30</option>
+                                        <option value="40">40</option>
+                                        <option value="50">50</option>
+                                    </select>
                                 </div>
-                                <div class="input-field col s12">
-                                    <button class="btn waves-effect waves-light right default" type="submit" name="action">Start <i class="material-icons right">send</i></button>
+                                <div class="col-md-12">
+                                    <button class="btn btn--primary type--uppercase" type="submit" name="action">Start</button>
                                 </div>
                             </div>
                         </form>
                     </div>
-
                 </div>
             </div>
         </div>
-
-    </div>
+    </section>
 </div>

@@ -1,0 +1,19 @@
+Generating public/private rsa key pair.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/uav6lbg5/.ssh/id_rsa.
+Your public key has been saved in /home/uav6lbg5/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:9tDO4QvRiC/97mF3b/vEAjgGl6uJ3QKxvrmZIqspamk
+The key's randomart image is:
++---[RSA 2048]----+
+|                 |
+|           .     |
+|      . . o      |
+|       + * o     |
+|      + S O .    |
+|     . B % o . . |
+|  .   + O O . o o|
+|.E. .  * = + . +.|
+|O..o .*. o=    o=|
++----[SHA256]-----+
