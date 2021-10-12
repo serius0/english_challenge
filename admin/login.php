@@ -1,7 +1,3 @@
-<!DOCTYPE html>
-<html>
-
-<body>
     <?php
     if (isset($_POST['login'])) {
         var_dump($_POST);
@@ -28,22 +24,118 @@
     }
 
     ?>
+    <!DOCTYPE html>
+    <html lang="en">
 
-    <form action="" method="post">
-        <h2>FORM LOGIN</h2>
-        <div>
-            <input type="text" placeholder="Username" required autofocus name='user'>
-            <input type="password" placeholder="Password" required="" name='pass'>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="theme/favicon.png" type="image/png" rel="icon">
+        <meta name="theme-color" content="#1a54de">
+        <meta name="msapplication-navbutton-color" content="#1a54de">
+        <meta name="apple-mobile-web-app-status-bar-style" content="#1a54de">
+        <title>Login - English Challenge</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="home/css/materialize.css" type="text/css" rel="stylesheet" />
+        <link href="home/css/app-style.css" type="text/css" rel="stylesheet" />
+        <link href="theme/app-theme.css" type="text/css" rel="stylesheet" />
+
+    </head>
+
+    <body>
+        <div id="pre-page-loader">
+            <div id="pre-page-loader-center">
+                <div id="pre-page-loader-center-absolute">
+                    <div class="object" id="object_one"></div>
+                    <div class="object" id="object_two"></div>
+                    <div class="object" id="object_three"></div>
+                    <div class="object" id="object_four"></div>
+                    <div class="object" id="object_five"></div>
+                    <div class="object" id="object_six"></div>
+                    <div class="object" id="object_seven"></div>
+                    <div class="object" id="object_eight"></div>
+                    <div class="object" id="object_big"></div>
+                </div>
+            </div>
         </div>
-        <button name='login' type="submit">Masuk</button>
-    </form>
-</body>
+        <main>
+            <div id="brand-banner">
+                <div class="section">
+                    <div class="row">
+                        <div class="col s12">
+                            <a href="index.php" class="brand">English Challenge</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-</html>
+            <div id="form-banner">
+                <div class="section">
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="card form-box">
+                                <div class="card-content">
+                                    <span class="card-title login-title">Welcome back&#33;</span>
+                                    <div class="row">
+                                        <form method="post">
+                                            <div class="input-field col s12">
+                                                <i class="material-icons prefix">mail</i>
+                                                <input id="email" name="user" type="text">
+                                                <label for="email">Email</label>
+                                            </div>
+                                            <div class="input-field col s12">
+                                                <i class="material-icons prefix">lock</i>
+                                                <input id="password" name="pass" type="password">
+                                                <label for="password">Password</label>
+                                            </div>
 
-<?php
-// $pass = password_hash("S3r?usman", PASSWORD_DEFAULT);
-// $query = mysqli_query($conn, "insert into member values(null, 'Seriusman Waruwu', 'seriusman0', '$pass', current_timestamp, 1)");
-// if ($query) echo "berhasil";
-// else echo "gagal";
-?>
+                                            <div class="input-field col s12">
+                                                <button class="col s12 btn waves-effect waves-light default" type="submit" name="login">Sign in to your account</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        <footer class="form-footer">
+
+            <div class="row">
+                <div class="col s12 center">
+                    <ul class="footer-list">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">&copy; English Challenge</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <script src="home/js/jquery.min.js"></script>
+        <script src="home/js/materialize.js"></script>
+        <script src="home/js/jquery.gradientify.min.js"></script>
+        <script src="home/js/init.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("body").gradientify({
+                    gradients: [{
+                        start: [237, 238, 240],
+                        stop: [246, 246, 246]
+                    }, {
+                        start: [246, 246, 246],
+                        stop: [228, 228, 228]
+                    }, {
+                        start: [228, 228, 228],
+                        stop: [246, 246, 246]
+                    }]
+                });
+            });
+        </script>
+    </body>
+
+    </html>
