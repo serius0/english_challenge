@@ -7,10 +7,7 @@
             <div class="col l6 hide-on-med-and-down">
                 <div class="col l12">
                     <div class="input-field desktop-search-div title center">
-                        Hai <?php
-                            $name = mysqli_fetch_array(getUser($_SESSION['id']))['name'];
-                            echo $name;
-                            ?>, welcome to admin side of English Challenge.
+                        Hai Admin, Welcome to admin side of English Challenge.
                     </div>
                 </div>
             </div>
