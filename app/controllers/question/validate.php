@@ -5,7 +5,7 @@
         </div>
         <div class="container pos-vertical-center">
             <div class="row">
-                <div class="col-md-7 col-lg-5 ">
+                <div class="col-md-7 col-lg-12">
                     <div class="boxed boxed--border">
                         <div class="col s12">
                             <div class="card faq-card">

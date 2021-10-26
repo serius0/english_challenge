@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-md-7 col-lg-5 ">
                     <div class="boxed boxed--border">
-                        <h3>Welcome Buddy, </br>let's get started by fill the form bellow</h3>
+                        <h3>Welcome, </br>let's get started by fill the form bellow</h3>
                     </div>
                     <div class="boxed boxed--border">
                         <form action="index.php?page=home" method="POST">
