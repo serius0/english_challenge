@@ -49,10 +49,10 @@
                             <div class="card-content">
                                 <?php
                                 if (!isset($_GET['page'])) include "main_content.php";
-                                elseif ($_GET['page'] == 'question') include "question.php";
                                 elseif ($_GET['page'] == 'history') include "history.php";
                                 elseif ($_GET['page'] == 'option') include "option.php";
                                 elseif ($_GET['page'] == 'user') include "user.php";
+                                elseif ($_GET['page'] == 'questions') include "questions.php";
                                 ?>
                             </div>
                         </div>

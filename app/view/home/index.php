@@ -17,16 +17,16 @@
                                 </div>
                                 <div class="input-select col-md-12">
                                     <select id="level" name="level" required>
-                                        <option selected="" value="">Select An Option</option>
-                                        <option value="1">Beginner</option>
+                                        <option value="">Select An Option</option>
+                                        <option selected value="1">Beginner</option>
                                         <option value="2">Intermediate</option>
                                         <option value="3">Advanced</option>
                                     </select>
                                 </div>
                                 <div class="col-md-12">
                                     <select id="amount" name="amount" required>
-                                        <option selected="" value="">Amount Of Test</option>
-                                        <option value="10">10</option>
+                                        <option value="">Amount Of Test</option>
+                                        <option selected value="10">10</option>
                                         <option value="20">20</option>
                                         <option value="30">30</option>
                                         <option value="40">40</option>

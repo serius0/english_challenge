@@ -28,24 +28,24 @@ function deleteItem($id, $tableName)
     else return false;
 }
 
-function addQuestion($question, $description, $answer, $level)
+function addQuestions($question, $a, $b, $c, $d, $description, $answer, $level)
 {
     global $conn;
-    $insert = mysqli_query($conn, "INSERT INTO soal VALUES (null, '$question', '$description', '$answer', '$level', current_timestamp)");
+    $insert = mysqli_query($conn, "INSERT INTO questions VALUES (null, '$question', '$a', '$b', '$c', '$d',  '$description', '$answer', '$level', current_timestamp)");
     if ($insert) echo "<script>window.alert('Add Question Success');
-    window.location='index.php?page=question'</script>";
+    window.location='index.php?page=questions'</script>";
     else echo "<script>window.alert('Add Question Failed');
-    window.location='index.php?page=question'</script>";
+    window.location='index.php?page=questions'</script>";
 }
 
-function updateQuestion($id, $question, $description, $answer, $level)
+function updateQuestions($id, $question, $a, $b, $c, $d, $description, $answer, $level)
 {
     global $conn;
-    $update = mysqli_query($conn, "UPDATE soal SET `question` = '$question', `description` = '$description', `answer` = '$answer', `level` = '$level' where `id` = '$id'");
+    $update = mysqli_query($conn, "UPDATE questions SET `question` = '$question', `a` = '$a',`b` = '$b',`c` = '$c',`d` = '$d', `description` = '$description', `answer` = '$answer', `level` = '$level' where `id` = '$id'");
     if ($update) echo "<script>window.alert('Update Question Success');
-    window.location='index.php?page=question'</script>";
+    window.location='index.php?page=questions'</script>";
     else echo "<script>window.alert('Update Question Failed');
-    window.location='index.php?page=question'</script>";
+    window.location='index.php?page=questions'</script>";
 }
 
 function getItem($tableName, $id)
@@ -120,4 +120,18 @@ function updateOption($id, $content)
     window.location='index.php?page=option'</script>";
     else echo "<script>window.alert('Update Option Failed');
     window.location='index.php?page=option'</script>";
+}
+
+function conv($data)
+{
+    switch ($data) {
+        case 1:
+            return "A";
+        case 2:
+            return "B";
+        case 3:
+            return "C";
+        case 4:
+            return "D";
+    }
 }

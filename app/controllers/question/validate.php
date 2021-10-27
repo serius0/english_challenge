@@ -22,10 +22,11 @@
                                                 mysqli_query($conn, "update history set history.`score`=score+level where history.id = $_SESSION[id]");
                                             }
 
-                                            $checkQ  = mysqli_fetch_assoc(mysqli_query($conn, "select * from soal where id = $qId"));
-                                            $checkTrueA  = mysqli_fetch_assoc(mysqli_query($conn, "select * from options, soal where options.id = soal.answer and soal.id=$qId"));
+                                            //id ini adalah idtmpQ
+                                            $checkQ  = mysqli_fetch_assoc(mysqli_query($conn, "select * from tempQuestion where id = '$qId'"));
+                                            $question = mysqli_fetch_array(mysqli_query($conn, "select * from questions where id = '$checkQ[id_question]'"));
 
-                                            if ($checkQ['answer'] == $answerId) {
+                                            if ($question['answer'] == $answerId) {
                                                 echo "<h1>Correct</h1>";
                                                 updateScore();
                                                 //update status tempQuestion
@@ -36,7 +37,7 @@
                                                 mysqli_query($conn, "UPDATE tempQuestion set status = 1 where tempQuestion.id_session = $_SESSION[id] and tempQuestion.id_question = $qId");
                                             ?>
                                         <p>The answer should be</p>
-                                        <p><b><?= $checkTrueA['content'] ?></b></p>
+                                        <p><b><?= conv($question['answer']) . ".  " . $question[$question['answer'] + 1] ?></b></p>
                                         </p>
                                     </div>
                                 </div>
@@ -44,7 +45,7 @@
                         </div>
                     </div>
                     <div class="boxed boxed--border">
-                        <h1><?= $checkQ['description'] ?></h1>
+                        <h1><?= $question['description'] ?></h1>
 
                     <?php }
 

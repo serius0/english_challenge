@@ -1,17 +1,21 @@
 <?php if (!isset($_GET['act'])) { ?>
 
     <div class="fixed-action-btn" id="" style="display:true">
-        <a class="btn-floating btn-large" href="index.php?page=question&act=add">
+        <a class="btn-floating btn-large" href="index.php?page=questions&act=add">
             <i class="large material-icons">add</i>
         </a>
     </div>
 
-    <span class="card-title dark4">This Is main Question</span>
+    <span class="card-title dark4">This Is main Questions</span>
     <table class="responsive-table">
         <thead>
             <tr>
                 <th>ID</th>
                 <th>Question</th>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+                <th>D</th>
                 <th>Description</th>
                 <th>Answer</th>
                 <th>Level</th>
@@ -21,19 +25,23 @@
         </thead>
         <tbody>
             <?php
-            $data = getTable("soal");
+            $data = getTable("questions");
             $no = 1;
             while ($i = mysqli_fetch_array($data)) {
                 echo "<tr>
             <td>$i[id]</td>
             <td>$i[question]</td>
+            <td>$i[a]</td>
+            <td>$i[b]</td>
+            <td>$i[c]</td>
+            <td>$i[d]</td>
             <td>$i[description]</td>
-            <td>$i[answer]</td>
+            <td>" . conv($i['answer']) . "</td>
             <td>$i[level]</td>
             <td>$i[update_at]</td>
             <td>
-            <a href='index.php?page=question&act=edit&id=$i[id]'>Edit</a>
-            <a href='index.php?page=question&act=delete&id=$i[id]' onclick=\"return confirm('Are you sure?')\">Delete</a>
+            <a href='index.php?page=questions&act=edit&id=$i[id]'>Edit</a>
+            <a href='index.php?page=questions&act=delete&id=$i[id]' onclick=\"return confirm('Are you sure?')\">Delete</a>
             </td></tr>";
             }
             ?>
@@ -42,15 +50,15 @@
     </div>
 <?php
 } elseif ($_GET['act'] == 'delete') {
-    if (deleteItem($_GET['id'], "soal")) {
+    if (deleteItem($_GET['id'], "questions")) {
         echo "<script>window.alert('Delete Success');
-        window.location='index.php?page=question'</script>";
+        window.location='index.php?page=questions'</script>";
     } else echo "<script>window.alert('Delete Failed');
-    window.location='index.php?page=question'</script>";
+    window.location='index.php?page=questions'</script>";
 } elseif ($_GET['act'] == 'add') {
 
     if (isset($_POST['submit'])) {
-        addQuestion($_POST['question'], $_POST['description'], $_POST['answer'], $_POST['level']);
+        addQuestions($_POST['question'], $_POST['a'], $_POST['b'], $_POST['c'], $_POST['d'], $_POST['description'], $_POST['answer'], $_POST['level']);
         // mysqli_query($conn, "INSERT INTO soal values(null, '$_POST[question]', '$_POST[description]', '$_POST[answer]', '$_POST[level]', current_timestamp)");
     }
 ?>
@@ -63,21 +71,34 @@
                     <label for="question" class="">Question</label>
                 </div>
                 <div class="input-field col s12">
+                    <input id="a" name="a" type="text">
+                    <label for="a" class="">Option A</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="b" name="b" type="text">
+                    <label for="b" class="">Option B</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="c" name="c" type="text">
+                    <label for="c" class="">Option C</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="d" name="d" type="text">
+                    <label for="d" class="">Option D</label>
+                </div>
+                <div class="input-field col s12">
                     <textarea id="description" name="description" class="materialize-textarea"></textarea>
                     <label for="description">Description</label>
                 </div>
                 <div class="input-field col s12">
                     <select id="answer" name="answer" required>
                         <option value=""><i> -- select answer -- </i></option>
-                        <?php
-                        $option = getTable('options');
-                        while ($i = mysqli_fetch_array($option)) {
-                            echo "<option value='$i[id]'>$i[id]. $i[content]</option>";
-                        }
-                        ?>
+                        <option value="1">A</option>
+                        <option value="2">B</option>
+                        <option value="3">C</option>
+                        <option value="4">D</option>
                     </select>
                 </div>
-
                 <div class="col s12">
                     <select id="level" name="level" required>
                         <option value="1">Beginner</option>
@@ -94,10 +115,10 @@
 <?php } elseif ($_GET['act'] == 'edit') {
 
     if (isset($_POST['update'])) {
-        updateQuestion($_GET['id'], $_POST['question'], $_POST['description'], $_POST['answer'], $_POST['level']);
+        updateQuestions($_GET['id'], $_POST['question'], $_POST['a'], $_POST['b'], $_POST['c'], $_POST['d'], $_POST['description'], $_POST['answer'], $_POST['level']);
     }
 
-    $item = mysqli_fetch_array(getItem('soal', $_GET['id']));
+    $item = mysqli_fetch_array(getItem('questions', $_GET['id']));
 ?>
     <span class="card-title">Edit Question</span>
     <div class="row">
@@ -108,19 +129,33 @@
                     <label for="question" class="">Question</label>
                 </div>
                 <div class="input-field col s12">
+                    <input id="a" name="a" type="text" value="<?= $item['a'] ?>">
+                    <label for="a" class="">Option A</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="b" name="b" type="text" value="<?= $item['b'] ?>">
+                    <label for="b" class="">Option B</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="c" name="c" type="text" value="<?= $item['c'] ?>">
+                    <label for="c" class="">Option C</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="d" name="d" type="text" value="<?= $item['d'] ?>">
+                    <label for="d" class="">Option D</label>
+                </div>
+                <div class="input-field col s12">
                     <textarea id="description" name="description" class="materialize-textarea"><?= $item['description'] ?></textarea>
                     <label for="description">Description</label>
                 </div>
                 <div class="input-field col s12">
+
                     <select id="answer" name="answer" required>
                         <option value=""><i> -- select answer -- </i></option>
-                        <?php
-                        $option = getTable('options');
-                        while ($i = mysqli_fetch_array($option)) {
-                            if ($i['id'] == $item['answer']) echo "<option selected value='$i[id]'>$i[id]. $i[content]</option>";
-                            else echo "<option value='$i[id]'>$i[id]. $i[content]</option>";
-                        }
-                        ?>
+                        <option <?= selectedItem($item['answer'], 1) ?> value="1">A</option>
+                        <option <?= selectedItem($item['answer'], 2) ?> value="2">B</option>
+                        <option <?= selectedItem($item['answer'], 3) ?> value="3">C</option>
+                        <option <?= selectedItem($item['answer'], 4) ?> value="4">D</option>
                     </select>
                 </div>
                 <div class="col s12">

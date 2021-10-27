@@ -10,7 +10,7 @@ function getQueQuestion($amount, $level)
     global $conn;
     global $globalQuestion;
     $data = [];
-    $get = mysqli_query($conn, "SELECT id from soal where level = '$level'");
+    $get = mysqli_query($conn, "SELECT id from questions where level = '$level'");
     while ($i = mysqli_fetch_array($get)) {
         array_push($data, $i['id']);
     }
