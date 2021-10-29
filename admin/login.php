@@ -93,6 +93,7 @@
                                             <div class="input-field col s12">
                                                 <button class="col s12 btn waves-effect waves-light default" type="submit" name="login">Sign in to your account</button>
                                             </div>
+                                            <a class="" href="../public/index.php">Login As Anonymous</a>
                                         </form>
                                     </div>
                                 </div>

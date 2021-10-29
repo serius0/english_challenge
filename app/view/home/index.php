@@ -36,6 +36,7 @@
                                 <div class="col-md-12">
                                     <button class="btn btn--primary type--uppercase" type="submit" name="action">Start</button>
                                 </div>
+                                <a class="" href="../admin/index.php">Login As Admin</a>
                             </div>
                         </form>
                     </div>
