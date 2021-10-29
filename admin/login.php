@@ -1,6 +1,6 @@
     <?php
     if (isset($_POST['login'])) {
-        var_dump($_POST);
+        // var_dump($_POST);
         $user = $_POST['user'];
         $pass = $_POST['pass'];
 
@@ -17,7 +17,7 @@
             }
             header('location:index.php');
         } else {
-            echo "<script>window.alert('Maaf, Anda Tidak Memiliki akses ');
+            echo "<script>window.alert('Sorry, your credential needed ');
                         window.location('index.php');
                     </script>";
         }
