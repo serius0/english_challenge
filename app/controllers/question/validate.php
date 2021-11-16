@@ -55,6 +55,7 @@
 
                     ?>
 
+                    
                     </div>
                     <a class="btn btn--primary type--uppercase" href="index.php?page=question">Next</a>
                 </div>
