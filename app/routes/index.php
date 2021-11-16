@@ -43,7 +43,6 @@ require_once '../app/config/index.php';
         else require_once "../app/view/home/index.php";
 
         ?>  
-         
     </main>
 
     <!--<div class="loader"></div>-->
