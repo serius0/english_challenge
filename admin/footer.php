@@ -1,7 +1,7 @@
 <footer class="page-footer white" id="me-footer">
     <div class="footer-copyright">
         <div class="left copyright-text">
-            &copy; English Challenge
+            &copy; English Challenge 
         </div>
         <div class="right resources-box">
             <ul>
