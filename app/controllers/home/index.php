@@ -4,6 +4,7 @@ $name = $_POST['name'];
 $level = $_POST['level'];
 $amount = $_POST['amount'];
 $id_session;
+
 function getQueQuestion($amount, $level)
 {
     global $id_session;
@@ -30,7 +31,8 @@ function homestore($name, $level, $amount)
 {
     global $conn;
 
-    $result = mysqli_query($conn, "INSERT INTO history (`name`, `level`, `amount`) values ('$name','$level','$amount')");
+    $result = mysqli_query($conn, "INSERT INTO history (`name`, `level`, `amount`) 
+                                    values ('$name','$level','$amount')");
     $id_session = mysqli_insert_id($conn);
     return $id_session;
 }
@@ -55,5 +57,4 @@ function addToTemp($id_session, $id_question)
         )
     );
 }
-
 header('location:index.php?page=question');
