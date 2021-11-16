@@ -19,11 +19,11 @@
                                             function updateScore()
                                             {
                                                 global $conn;
-                                                mysqli_query($conn, "update history set history.`score`=score+level where history.id = $_SESSION[id]");
+                                                mysqli_query($conn, "update history set history.`score`=score+level where history.id = '$_SESSION[id]'");
                                             }
 
                                             //id ini adalah idtmpQ
-                                            $checkQ  = mysqli_fetch_assoc(mysqli_query($conn, "select * from tempQuestion where id = '$qId'"));
+                                            $checkQ  = mysqli_fetch_assoc(mysqli_query($conn, "select * from tempQuestion where id_question = '$qId' and id_session='$_SESSION[id]'"));
                                             $question = mysqli_fetch_array(mysqli_query($conn, "select * from questions where id = '$checkQ[id_question]'"));
 
                                             if ($question['answer'] == $answerId) {
