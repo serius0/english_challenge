@@ -42,8 +42,7 @@ require_once '../app/config/index.php';
         elseif ($page == 'validateanswer') require_once '../app/controllers/question/validate.php';
         else require_once "../app/view/home/index.php";
 
-        ?>
-        
+        ?>   
     </main>
 
     <!--<div class="loader"></div>-->
