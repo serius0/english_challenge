@@ -43,7 +43,6 @@ for ($i = 0; $i < count($dataQuestion); $i++) {
     addToTemp($id_session, $dataQuestion[$i]);
 }
 
-
 function addToTemp($id_session, $id_question)
 {
     global $conn;
