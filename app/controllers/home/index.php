@@ -55,4 +55,5 @@ function addToTemp($id_session, $id_question)
     );
 }
 
+
 header('location:index.php?page=question');
