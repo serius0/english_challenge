@@ -11,14 +11,13 @@
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Question</th>
+                <th>Pertanyaan</th>
                 <th>A</th>
                 <th>B</th>
                 <th>C</th>
-                <th>D</th>
-                <th>Description</th>
-                <th>Answer</th>
-                <th>Level</th>
+                <th>Deskripsi</th>
+                <th>Jawaban</th>
+                <th>Kelas</th>
                 <th>Timestamp</th>
                 <th>Action</th>
             </tr>
@@ -34,7 +33,6 @@
             <td>$i[a]</td>
             <td>$i[b]</td>
             <td>$i[c]</td>
-            <td>$i[d]</td>
             <td>$i[description]</td>
             <td>" . conv($i['answer']) . "</td>
             <td>$i[level]</td>
@@ -62,48 +60,43 @@
         // mysqli_query($conn, "INSERT INTO soal values(null, '$_POST[question]', '$_POST[description]', '$_POST[answer]', '$_POST[level]', current_timestamp)");
     }
 ?>
-    <span class="card-title">Add Question</span>
+    <span class="card-title">Tambahkan Soal</span>
     <div class="row">
         <form action='' method="POST" class="col s12 no-padding">
             <div class="row no-margin">
                 <div class="input-field col s12">
                     <input id="question" name="question" type="text">
-                    <label for="question" class="">Question</label>
+                    <label for="question" class="">Soal</label>
                 </div>
                 <div class="input-field col s12">
                     <input id="a" name="a" type="text">
-                    <label for="a" class="">Option A</label>
+                    <label for="a" class="">Pilihan A</label>
                 </div>
                 <div class="input-field col s12">
                     <input id="b" name="b" type="text">
-                    <label for="b" class="">Option B</label>
+                    <label for="b" class="">Pilihan B</label>
                 </div>
                 <div class="input-field col s12">
                     <input id="c" name="c" type="text">
-                    <label for="c" class="">Option C</label>
-                </div>
-                <div class="input-field col s12">
-                    <input id="d" name="d" type="text">
-                    <label for="d" class="">Option D</label>
+                    <label for="c" class="">Pilihan C</label>
                 </div>
                 <div class="input-field col s12">
                     <textarea id="description" name="description" class="materialize-textarea"></textarea>
-                    <label for="description">Description</label>
+                    <label for="description">Deskripsi</label>
                 </div>
                 <div class="input-field col s12">
                     <select id="answer" name="answer" required>
-                        <option value=""><i> -- select answer -- </i></option>
+                        <option value=""><i> -- pilihan jawaban -- </i></option>
                         <option value="1">A</option>
                         <option value="2">B</option>
                         <option value="3">C</option>
-                        <option value="4">D</option>
                     </select>
                 </div>
                 <div class="col s12">
                     <select id="level" name="level" required>
-                        <option value="1">Beginner</option>
-                        <option value="2">Intermediate</option>
-                        <option value="3">Advanced</option>
+                        <option value="1">Kelas 1</option>
+                        <option value="2">Kelas 2</option>
+                        <option value="3">Kelas 3</option>
                     </select>
                 </div>
                 <div class="input-field col s12">
@@ -126,43 +119,38 @@
             <div class="row no-margin">
                 <div class="input-field col s12">
                     <input id="question" name="question" type="text" value="<?= $item['question'] ?>">
-                    <label for="question" class="">Question</label>
+                    <label for="question" class="">Soal</label>
                 </div>
                 <div class="input-field col s12">
                     <input id="a" name="a" type="text" value="<?= $item['a'] ?>">
-                    <label for="a" class="">Option A</label>
+                    <label for="a" class="">Pilihan A</label>
                 </div>
                 <div class="input-field col s12">
                     <input id="b" name="b" type="text" value="<?= $item['b'] ?>">
-                    <label for="b" class="">Option B</label>
+                    <label for="b" class="">Pilihan B</label>
                 </div>
                 <div class="input-field col s12">
                     <input id="c" name="c" type="text" value="<?= $item['c'] ?>">
-                    <label for="c" class="">Option C</label>
-                </div>
-                <div class="input-field col s12">
-                    <input id="d" name="d" type="text" value="<?= $item['d'] ?>">
-                    <label for="d" class="">Option D</label>
+                    <label for="c" class="">Pilihan C</label>
                 </div>
                 <div class="input-field col s12">
                     <textarea id="description" name="description" class="materialize-textarea"><?= $item['description'] ?></textarea>
-                    <label for="description">Description</label>
+                    <label for="description">Deskripsi</label>
                 </div>
                 <div class="input-field col s12">
 
                     <select id="answer" name="answer" required>
-                        <option value=""><i> -- select answer -- </i></option>
+                        <option value=""><i> -- pilihan jawaban -- </i></option>
                         <option <?= selectedItem($item['answer'], 1) ?> value="1">A</option>
                         <option <?= selectedItem($item['answer'], 2) ?> value="2">B</option>
                         <option <?= selectedItem($item['answer'], 3) ?> value="3">C</option>
-                        <option <?= selectedItem($item['answer'], 4) ?> value="4">D</option>
                     </select>
                 </div>
                 <div class="col s12">
                     <select id="level" name="level" required>
-                        <option <?= selectedItem($item['level'], 1) ?> value="1">Beginner</option>
-                        <option <?= selectedItem($item['level'], 2) ?> value="2">Intermediate</option>
-                        <option <?= selectedItem($item['level'], 3) ?> value="3">Advanced</option>
+                        <option <?= selectedItem($item['level'], 1) ?> value="1">Kelas 1</option>
+                        <option <?= selectedItem($item['level'], 2) ?> value="2">Kelas 2</option>
+                        <option <?= selectedItem($item['level'], 3) ?> value="3">Kelas 3</option>
                     </select>
                 </div>
                 <div class="input-field col s12">

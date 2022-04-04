@@ -1,13 +1,13 @@
 <nav id="me-navbar" class="white">
     <div class="nav-wrapper">
-        <a id="logo-container" href="index.php" class="brand-logo">English Challenge</a>
+        <a id="logo-container" href="index.php" class="brand-logo">LesinAja Quiz</a>
         <div class="row m-l-sidbar m-b-t-no">
             <div class="col l3 m6 s6" id="me-left-navbar">
             </div>
             <div class="col l6 hide-on-med-and-down">
                 <div class="col l12">
                     <div class="input-field desktop-search-div title center">
-                        Hai Admin, Welcome to admin side of English Challenge.
+                        Hai Admin, Selamat Datang
                     </div>
                 </div>
             </div>

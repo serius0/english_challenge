@@ -10,7 +10,7 @@ $qdata = mysqli_fetch_array(mysqli_query($conn, "select * from tempQuestion, que
 <div class="main-container">
     <section class="height-100 imagebg text-center" data-overlay="1">
         <div class="background-image-holder">
-            <img alt="background" src="img/bg_englishchallenge.png" />
+            <img alt="background" src="img/bg_LesinAja_1.jpg" />
         </div>
         <div class="container pos-vertical-center">
             <div class="row">

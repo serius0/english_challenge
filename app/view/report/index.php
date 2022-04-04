@@ -5,7 +5,7 @@ $data = mysqli_fetch_assoc(mysqli_query($conn, "select * from history where id=$
 <div class="main-container">
     <section class="height-100 imagebg text-center" data-overlay="1">
         <div class="background-image-holder">
-            <img alt="background" src="img/bg_englishchallenge.png" />
+            <img alt="background" src="img/bg_LesinAja_1.jpg" />
         </div>
         <div class="container pos-vertical-center">
             <div class="row">
@@ -16,8 +16,8 @@ $data = mysqli_fetch_assoc(mysqli_query($conn, "select * from history where id=$
                                 <div class="card-content">
                                     <div class="card-body active">
                                         <h1>
-                                            Congratulations <?= $data['name'] ?>,
-                                            You're Done
+                                            Selamat <?= $data['name'] ?>,
+                                            Kamu Sudah Mengerjakan
                                         </h1>
                                     </div>
                                 </div>
@@ -25,7 +25,7 @@ $data = mysqli_fetch_assoc(mysqli_query($conn, "select * from history where id=$
                         </div>
                     </div>
                     <div class="boxed boxed--border">
-                        <h1>Your Total Score</h1>
+                        <h1>Total Skor Kamu</h1>
                         <?php
                         $max = $data['level'] * $data['amount'];
                         $real = $data['score'];
@@ -37,7 +37,7 @@ $data = mysqli_fetch_assoc(mysqli_query($conn, "select * from history where id=$
                         of <?= $max ?>
                     </div>
                     <div class="boxed boxed--border">
-                        <a class="btn btn--lg btn--primary" href="../app/view/logout.php">Try Again</a>
+                        <a class="btn btn--lg btn--primary" href="../app/view/logout.php">Coba Lagi</a>
                     </div>
                 </div>
             </div>

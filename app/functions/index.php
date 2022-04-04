@@ -18,7 +18,5 @@ function conv($data)
             return "B";
         case 3:
             return "C";
-        case 4:
-            return "D";
     }
 }

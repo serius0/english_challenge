@@ -8,7 +8,7 @@
     <meta name="theme-color" content="#1a54de">
     <meta name="msapplication-navbutton-color" content="#1a54de">
     <meta name="apple-mobile-web-app-status-bar-style" content="#1a54de">
-    <title>Dashboard - English Challenge</title>
+    <title>Dashboard - LesinAja Quiz</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css" rel="stylesheet" />
     <link href="css/materialize.min.css" type="text/css" rel="stylesheet" />
     <link href="plugins/chartist/dist/chartist.min.css" type="text/css" rel="stylesheet" />

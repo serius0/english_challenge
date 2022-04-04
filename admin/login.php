@@ -34,7 +34,7 @@
         <meta name="theme-color" content="#1a54de">
         <meta name="msapplication-navbutton-color" content="#1a54de">
         <meta name="apple-mobile-web-app-status-bar-style" content="#1a54de">
-        <title>Login - English Challenge</title>
+        <title>Login - LesinAja Quiz</title>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="home/css/materialize.css" type="text/css" rel="stylesheet" />
@@ -64,7 +64,7 @@
                 <div class="section">
                     <div class="row">
                         <div class="col s12">
-                            <a href="index.php" class="brand">English Challenge</a>
+                            <a href="index.php" class="brand">LesinAja Quiz</a>
                         </div>
                     </div>
                 </div>
@@ -76,7 +76,7 @@
                         <div class="col s12">
                             <div class="card form-box">
                                 <div class="card-content">
-                                    <span class="card-title login-title">Welcome back&#33;</span>
+                                    <span class="card-title login-title">Selamat Datang Kembali&#33;</span>
                                     <div class="row">
                                         <form method="post">
                                             <div class="input-field col s12">
