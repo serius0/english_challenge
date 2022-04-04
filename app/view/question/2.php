@@ -15,4 +15,3 @@ function getQuestionContentById($id)
 <a href="index.php?page=validate" class="btn btn-primary">a. This is the answer option a</a>
 <a href="index.php?page=validate" class="btn btn-primary">b. This is the answer option b </a>
 <a href="index.php?page=validate" class="btn btn-primary">c. This is the answer option c </a>
-<a href="index.php?page=validate" class="btn btn-primary">d. This is the answer option d </a>

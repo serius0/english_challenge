@@ -40,9 +40,6 @@ $qdata = mysqli_fetch_array(mysqli_query($conn, "select * from tempQuestion, que
                                 <div class="col-md-12">
                                     <a class="btn btn--lg btn--primary" href="index.php?page=validateanswer&id=3&questionId=<?= $qdata['id'] ?>">C. <?= $qdata['c'] ?></a>
                                 </div>
-                                <div class="col-md-12">
-                                    <a class="btn btn--lg btn--primary" href="index.php?page=validateanswer&id=4&questionId=<?= $qdata['id'] ?>">D. <?= $qdata['d'] ?></a>
-                                </div>
                             </div>
                         </form>
                     </div>
