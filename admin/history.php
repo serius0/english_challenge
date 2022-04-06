@@ -18,7 +18,7 @@
         <tbody>
             <?php
             $data = getTable("history");
-            $no = 1;
+                                                                $no = 1;
             while ($i = mysqli_fetch_array($data)) {
                 echo "<tr>
                         <td>$i[id]</td>
